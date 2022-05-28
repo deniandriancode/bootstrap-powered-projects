@@ -1,0 +1,18 @@
+body {
+    padding-top: 70px;
+}
+
+#webIntro, #webIntro .row {
+    min-height: calc(100vh - 70px);
+    height: fit-content;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: rgba(230,230,230,0.5);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+}
