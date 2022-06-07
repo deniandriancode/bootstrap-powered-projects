@@ -1,0 +1,55 @@
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/scss/functions";
+
+// custom variables
+$my-colors: (
+    "custom-1": #7ae0ff,
+    "custom-2": #4393de,
+    "custom-3": #4877f0,
+    "custom-4": #393edb,
+    "custom-5": #7e5ffa,
+);
+
+// Include any default variable overrides here
+
+// Include remainder of required Bootstrap stylesheets
+@import "../bootstrap/scss/variables";
+
+// modify variables
+$theme-colors: map-merge($theme-colors, $my-colors);
+
+// Include any default map overrides here
+
+// Include remainder of required parts
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/utilities/api";
+
+// defining custom utilities
+$my-utilities: (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        "bg-opacity": 1
+      ),
+      values: map-merge($utilities-bg-colors, $my-colors)
+    ),
+    "color": (
+      property: color,
+      class: text,
+      local-vars: (
+        "text-opacity": 1
+      ),
+      values: map-merge($utilities-text-colors, $my-colors)
+    )
+);
+
+// modify utilities
+$utilities: map-merge($utilities, $my-utilities);
+
+// Add additional custom code here
+
+// Bundle all the changes
+@import "../bootstrap/scss/bootstrap.scss";

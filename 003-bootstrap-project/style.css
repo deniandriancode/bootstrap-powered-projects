@@ -1,0 +1,21 @@
+[class*=btn-outline-custom]:hover {
+  color: #fff;
+}
+
+#popularPost img.img-fluid {
+  max-width: 100% !important;
+  height: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

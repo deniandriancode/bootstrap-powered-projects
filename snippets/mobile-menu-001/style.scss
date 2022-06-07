@@ -1,0 +1,24 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.navbar_main-navbar {
+    background-color: $indigo-600;
+}
+
+.hamburger-menu {
+    width: 1.5rem;
+}
+
+.btn-indigo {
+    padding: 5px 10px;
+    border-radius: .2rem;
+    background-color: $indigo-500;
+    transition: box-shadow .3s ease;
+    &:hover, &:focus {
+        background-color: $indigo-700;
+    }
+    &:focus {
+        box-shadow: 0 0 1px 4px $indigo-500;
+    }
+}

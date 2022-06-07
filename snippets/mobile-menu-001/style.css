@@ -1,0 +1,22 @@
+.navbar_main-navbar {
+  background-color: #520dc2;
+}
+
+.hamburger-menu {
+  width: 1.5rem;
+}
+
+.btn-indigo {
+  padding: 5px 10px;
+  border-radius: 0.2rem;
+  background-color: #6610f2;
+  transition: box-shadow 0.3s ease;
+}
+.btn-indigo:hover, .btn-indigo:focus {
+  background-color: #3d0a91;
+}
+.btn-indigo:focus {
+  box-shadow: 0 0 1px 4px #6610f2;
+}
+
+/*# sourceMappingURL=style.css.map */
