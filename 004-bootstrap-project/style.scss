@@ -1,0 +1,81 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@font-face {
+    font-family: "source-sans";
+    src: url(../assets/source-sans-pro-webfont/sourcesanspro-light-webfont.woff) format("woff"),
+         url(../assets/source-sans-pro-webfont/sourcesanspro-light-webfont.woff2) format("woff2");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+html, body {
+    font-family: source-sans, sans-serif;
+}
+
+body {
+    padding-top: 70px;
+}
+
+ul.underline-hover {
+    li {
+        a {
+            position: relative;
+            display: flex !important;
+            
+            &::after {
+                content: "";
+                transition: 250ms ease;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0%;
+                height: 1px;
+                background: #888;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#heroImageCaption {
+    bottom: 1rem;
+    left: 1.5rem;
+    user-select: none;
+}
+
+#heroImageCaptionSmall {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    font-size: 1rem !important;
+}
+
+.contact-location {
+    color: $blue-800 !important;
+}
+
+form {
+    input.form-control {
+        transition: 300ms;
+        border-color: inherit;
+
+        &:focus {
+            border-color: #555555 !important;
+        }
+    }
+    button.btn-warning-custom {
+        color: white !important;
+    }
+}
+
+footer.footer {
+    div {
+        padding: 60px 0;
+    }
+}

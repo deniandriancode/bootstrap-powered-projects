@@ -1,0 +1,31 @@
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/scss/functions";
+
+// Include any default variable overrides here
+$input-focus-bg:                        transparent;
+$input-focus-border-color:              transparent;
+$input-focus-box-shadow:                transparent;
+
+
+// Include remainder of required Bootstrap stylesheets
+@import "../bootstrap/scss/variables";
+
+// Include any default map overrides here
+$user-colors: (
+    "warning-custom": $orange-500
+);
+
+$theme-colors: map-merge($theme-colors, $user-colors);
+
+// Include remainder of required parts
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/utilities/api";
+
+// modify utilities
+
+// Add additional custom code here
+
+// Bundle all the changes
+@import "../bootstrap/scss/bootstrap.scss";
