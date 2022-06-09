@@ -1,7 +1,7 @@
 node_modules
 .env
 github.key
-003-bootstrap-project/bootstrap
-004-bootstrap-project/bootstrap
+*-bootstrap-project/bootstrap
+yarn-error.log
 bootstrap-template
 sass-learning

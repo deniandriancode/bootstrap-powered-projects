@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightroom</title>
+    <link rel="stylesheet" href="scss/custom.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <img src="img1.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
+      </div>
+      <div class="col-lg-3">
+        <img src="img2.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
+      </div>
+      <div class="col-lg-3">
+        <img src="img3.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
+      </div>
+      <div class="col-lg-3">
+        <img src="img4.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
+      </div>
+    </div>
+  </div>
+
+  <div class="cst-modal">
+    <img class="img-fluid img-cst-modal-content" src="img1.jpg" alt="">
+    <img class="img-fluid img-cst-modal-content" src="img2.jpg" alt="">
+    <img class="img-fluid img-cst-modal-content" src="img3.jpg" alt="">
+    <img class="img-fluid img-cst-modal-content" src="img4.jpg" alt="">
+    <button class="btn btn-lg border-0 rounded-pill" data-cst-control="prev"><i class="display-4 bi-chevron-compact-left text-light"></i></button>
+    <button class="btn btn-lg border-0 rounded-pill" data-cst-control="next"><i class="display-4 bi-chevron-compact-right text-light"></i></button>
+  </div>
+  <div class="cst-modal-content">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
