@@ -1,3 +1,7 @@
+:root {
+  --img-max-width: 900px;
+}
+
 .img-cst-lightbox {
   cursor: pointer;
 }
@@ -16,7 +20,7 @@
 }
 .cst-modal img {
   width: 95%;
-  max-width: 900px;
+  max-width: var(--img-max-width);
   opacity: 1;
   animation: fade 500ms ease;
   transition: 500ms ease;
@@ -63,10 +67,10 @@
 }
 @media screen and (min-width: 1024px) {
   [data-cst-control=prev] {
-    left: 10%;
+    left: calc(50% - var(--img-max-width) / 2 - 1rem);
   }
   [data-cst-control=next] {
-    right: 10%;
+    right: calc(50% - var(--img-max-width) / 2 - 1rem);
   }
 }
 
