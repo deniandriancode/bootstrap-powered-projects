@@ -1,0 +1,81 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+html {
+  scroll-padding: 20px;
+}
+
+body {
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+.cst-hide-scroll {
+  transition: 300ms ease;
+}
+
+.cst-hover {
+  &:hover {
+    background-color: #efefef;
+  }
+}
+
+#projects {
+  .project-gallery {
+    [class*="col"] {
+      overflow: hidden;
+    }
+  }
+
+  img {
+    transition: 200ms ease;
+
+    &:hover {
+      transform: scale(1.25);
+      filter: brightness(.75);
+    }
+  }
+}
+
+.cst-project-title {
+  top: 0;
+  left: .8rem;
+}
+
+.hero-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+form {
+  textarea {
+    height: 100px;
+    min-height: 80px !important;
+    resize: vertical;
+  }
+}
+
+section {
+  .container-fluid {
+    max-width: 1440px !important;
+  }
+}
+
+footer {
+  padding: 50px 0;
+
+  a {
+    transition: 200ms;
+
+    &:hover {
+      color: $success !important;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cst-project-title {
+    left: 4rem;
+  }
+}

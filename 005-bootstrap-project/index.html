@@ -5,42 +5,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightroom</title>
+    <title>Architect Co</title>
     <link rel="stylesheet" href="scss/custom.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="lightbox.css">
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <img src="img1.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
-      </div>
-      <div class="col-lg-3">
-        <img src="img2.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
-      </div>
-      <div class="col-lg-3">
-        <img src="img3.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
-      </div>
-      <div class="col-lg-3">
-        <img src="img4.jpg" alt="" class="img-fluid img-cst-lightbox rounded">
+  <nav class="navbar navbar-light navbar-expand-sm fixed-top shadow-sm bg-white cst-hide-scroll">
+    <div class="container-fluid container justify-content-center">
+      <a class="navbar-brand d-inline-flex" href=""><img alt="" class="img-fluid" src="brand.png" style="width: 2rem;"/> Architects</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link cst-hover px-4 mx-2 rounded" href="#projects"><i class="bi-building"></i> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cst-hover px-4 mx-2 rounded" href="#about"><i class="bi-info"></i> About</a>
+          </li>
+          <a class="nav-link cst-hover px-4 mx-2 rounded" href="#contact"><i class="bi-telephone"></i> Contact</a>
+          <li class="nav-item">
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
+  
+  <section id="heroImage">
+    <div class="container-fluid px-0 mx-0 position-relative text-center">
+      <img class="img-fluid" src="hero-image.jpg" alt="">
+      <div class="position-absolute hero-caption text-white display-6 fw-bold">
+        <span class="p-3 bg-dark opacity-75 rounded">XF</span><span class="d-none d-sm-inline-block text-white shadow p-3 rounded">Architects</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="cst-modal">
-    <img class="img-fluid img-cst-modal-content" src="" alt="">
-    <img class="img-fluid img-cst-modal-content" src="" alt="">
-    <button class="btn btn-lg border-0 rounded-pill" data-cst-control="prev"><i class="display-4 bi-chevron-compact-left text-light"></i></button>
-    <button class="btn btn-lg border-0 rounded-pill" data-cst-control="next"><i class="display-4 bi-chevron-compact-right text-light"></i></button>
-  </div>
+  <section id="projects">
+    <div class="container-fluid mt-5 mb-2">
+      <div class="row px-3">
+        <div class="col-lg-12 pb-3 border-bottom">
+          <h1>Projects</h1>
+        </div>
+      </div>
+
+      <div class="row px-sm-3 my-4 gy-4 project-gallery">
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house3.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Renovated</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house4.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Barn House</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house1.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Summer House</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house2.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Brick House</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house5.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Summer House</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house6.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Brick House</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house7.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Renovated</span>
+        </div>
+        <div class="col-sm-6 col-md-3 position-relative text-center">
+          <img class="img-fluid" src="house8.jpg" alt="">
+          <span class="position-absolute cst-project-title bg-dark text-light d-block py-2 px-3">Barn House</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container-fluid my-5">
+      <div class="row px-3 pt-3">
+        <div class="col-lg-12 pb-3 border-bottom">
+          <h1>About</h1>
+        </div>
+      </div>
+      <div class="row px-3 py-4">
+        <div class="col-lg-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-3 g-3 gx-4">
+      <div class="col-sm-6 col-md-3">
+        <div class="card border-0">
+          <img src="person1.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body px-0">
+            <h3 class="card-title ps-1">John Doe</h3>
+            <h6 class="card-subtitle my-4 d-block text-muted ps-1">CEO & Founder</h6>
+            <p class="card-text ps-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-grid">
+              <a href="#" class="btn btn-secondary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card border-0">
+          <img src="person2.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body px-0">
+            <h3 class="card-title ps-1">Luis Albuquerque</h3>
+            <h6 class="card-subtitle my-4 d-block text-muted ps-1">Architect</h6>
+            <p class="card-text ps-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-grid">
+              <a href="#" class="btn btn-secondary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card border-0">
+          <img src="person3.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body px-0">
+            <h3 class="card-title ps-1">Hugo</h3>
+            <h6 class="card-subtitle my-4 d-block text-muted ps-1">Architect</h6>
+            <p class="card-text ps-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-grid">
+              <a href="#" class="btn btn-secondary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="card border-0">
+          <img src="person4.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body px-0">
+            <h3 class="card-title ps-1">Anthony Squimpy</h3>
+            <h6 class="card-subtitle my-4 d-block text-muted ps-1">Architect</h6>
+            <p class="card-text ps-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-grid">
+              <a href="#" class="btn btn-secondary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container-fluid my-5">
+      <div class="row px-3 pt-3">
+        <div class="col-lg-12 pb-3 border-bottom">
+          <h1>Contact</h1>
+        </div>
+      </div>
+      
+      <div class="row px-3 py-3">
+        <div class="col-lg-12">
+          <p>Lets get in touch and talk about your next project.</p>
+        </div>
+      </div>
+
+      <div class="row px-3 py-3">
+        <form class="form">
+          <input class="form-control mb-3" type="text" name="name" placeholder="Name" required>
+          <input class="form-control mb-3" type="email" name="email" placeholder="Email" required>
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          <input class="form-control mb-3" type="text" name="subject" placeholder="Subject" required>
+          <textarea class="form-control mb-3" name="message" placeholder="Message" required></textarea>
+          <button class="btn btn-dark text-uppercase my-3" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="row px-3">
+      <div class="col-lg-12">
+        <img class="img-fluid" alt="" src="map.jpg"/>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-light bg-dark mt-3">
+    <div class="container-fluid px-0 mx-0 text-center">
+      <span>Powered by <a href="https://github.com/deniandriancode" class="text-light" target="_blank">webDeveloper</a></span>
+    </div>
+  </footer>
+
 
   <script src="script.js"></script>
-  <script src="lightbox.js"></script>
 </body>
 
 </html>
