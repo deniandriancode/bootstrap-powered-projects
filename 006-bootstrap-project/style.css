@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "crimson";
+  src: url("./crimson-pro/crimsonpro-variablefont_wght-webfont.woff2") format("woff2"), url("./crimson-pro/crimsonpro-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: crimson, ubuntu, sans-serif;
+  padding-top: 90px;
+}
+
+.btn.navbar-menu {
+  padding-top: 0.5rem;
+}
+.btn.navbar-menu:hover, .btn.navbar-menu:focus {
+  box-shadow: none;
+  background-color: #eee;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 1;
+  display: none;
+  animation: fadeOverlay 300ms ease-in-out;
+}
+
+.offset {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  animation: offsetIn 800ms ease-in-out;
+}
+
+.offset-body a {
+  text-decoration: none;
+  display: block;
+  width: auto;
+}
+.offset-body a:hover {
+  text-decoration: underline;
+}
+
+.btn.btn-close:focus {
+  box-shadow: none;
+}
+
+img.card-img-top, .card-body {
+  max-width: 300px;
+}
+
+.pagination li a:focus {
+  box-shadow: none;
+}
+
+.blog-posts ~ ul li {
+  transition: 250ms ease;
+  cursor: pointer;
+}
+.blog-posts ~ ul li:hover {
+  background: #efefef;
+}
+
+@keyframes offsetIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes offsetInReverse {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes fadeOverlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+  .offset {
+    left: unset;
+    right: 0%;
+    animation: offsetInReverse 800ms ease-in-out;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
