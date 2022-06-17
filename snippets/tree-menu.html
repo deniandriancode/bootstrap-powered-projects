@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tree Menu</title>
+	<style>
+
+	/* remove default bullets */
+	ul, #myUL {
+		list-style-type: none;
+		padding-inline-start: 1rem;
+	}
+
+	/* rmeove margins and padding from the parent ul */
+	#myUL {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* style the caret/arrow */
+	.caret {
+		cursor: pointer;
+		user-select: none;
+	}
+	
+	/* create the caret with unicode and style it */
+	.caret::before {
+		content: "\25B6";
+		color: black;
+		display: inline-block;
+		margin-right: 6px;
+		transition: 500ms ease;
+	}
+	
+	/* rotate the caret when clicked */
+	.caret-down::before {
+		transform: rotate(90deg);
+	}
+
+	/* hide the nested list */
+	.nested {
+		display: none;
+	}
+	
+	/* show the nested list when clicked */
+	.active {
+		display: block;
+	}
+	
+
+	</style>
+</head>
+<body>
+	
+	<ul id="myUL">
+		<li><span class="caret">Beverage</span></li>
+		<ul class="nested">
+			<li>Water</li>
+			<li>Coffee</li>
+			<li><span class="caret"></span>Tea</li>
+			<ul class="nested">
+				<li>Black Tea</li>
+				<li>White Tea</li>
+				<li><span class="caret"></span>Green Tea</li>
+				<ul class="nested">
+					<li>Sencha</li>
+					<li>Gyokuro</li>
+					<li>Matcha</li>
+					<li>Pi Lo Chun</li>
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+
+
+	<script>
+
+		const toggler = document.getElementsByClassName("caret");
+
+		for (let i = 0; i < toggler.length; i++) {
+					toggler[i].addEventListener("click", function() {
+								console.log(this);
+								this.parentElement.nextElementSibling.classList.toggle("active");
+								this.classList.toggle("caret-down");
+							});
+				}
+
+
+	</script>
+</body>
+</html>

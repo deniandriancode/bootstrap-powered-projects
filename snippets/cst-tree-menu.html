@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tree Menu</title>
+	<style>
+
+	#root-tree-menu, ul {
+		list-style-type: none;
+		/* padding-inline-start: 1.2rem; */
+		user-select: none;
+	}
+
+	.cst-pointer {
+		cursor: pointer;
+	}
+
+	.caret::before {
+		content: "\25B6";
+		color: black;
+		display: inline-block;
+		transition: 500ms ease;
+	}
+
+	.nested {
+		transition: 300ms ease;
+		overflow-y: hidden;
+		height: 0;
+	}
+
+	.caret-down::before {
+		transform: rotate(90deg);
+	}
+
+	</style>
+</head>
+<body>
+
+
+	<ul id="root-tree-menu">
+		<li class="cst-pointer"><span class="caret" data-cst-caret></span>Level 1</li>
+		<ul class="nested" data-cst-nested>
+			<li>Child 1.1</li>
+			<li>Child 1.2</li>
+			<li class="cst-pointer"><span class="caret" data-cst-caret></span>Child 1.3 Level 2</li>
+			<ul class="nested" data-cst-nested>
+				<li>Child 2.1</li>
+				<li>Child 2.2</li>
+				<li class="cst-pointer"><span class="caret" data-cst-caret></span>Child 2.3 Level 3</li>
+				<ul class="nested" data-cst-nested>
+					<li>Child 3.1</li>
+					<li>Child 3.2</li>
+					<li>Child 3.3</li>
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+
+
+	<script>
+	
+					const toggler = document.querySelectorAll("[data-cst-caret]");
+					const nested = document.querySelectorAll("[data-cst-nested]");
+
+					for (let i = 0; i < toggler.length; i++) {
+						toggler[i].parentElement.addEventListener("click", function() {
+									toggler[i].classList.toggle("caret-down");
+									if (toggler[i].classList.contains("caret-down")) {
+										if (i > 0) {
+													for (let j = i - 1; j > -1; j--) {
+																nested[j].style.height = `${nested[i].scrollHeight + nested[j].scrollHeight}px`
+															}
+												}
+												nested[i].style.height = `${nested[i].scrollHeight}px`;
+											} else {
+										if (i > 0) {
+													for (let j = i - 1; j > -1; j--) {
+																nested[j].style.height = `${nested[i].scrollHeight - nested[j].scrollHeight}px`
+															}
+												}
+														nested[i].style.height = "0";
+													}
+							});
+					}
+
+
+	</script>
+
+</body>
+</html>

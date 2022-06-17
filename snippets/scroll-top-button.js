@@ -1,4 +1,4 @@
-const btn = document.getElementById("scrollTop");
+const btn = document.querySelector("[data-scroll-top]");
 btn.addEventListener("click", scrollTopButton);
 
 window.addEventListener("scroll", scrollDocument);
