@@ -14,18 +14,325 @@
 
 <body>
 
-	<nav class="side-nav border">
-		<div class="container-fluid py-3">
-			<a href="" class="nav-header text-dark company-logo text-center"><h3>LOGO</h3></a>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark d-block d-md-none">
+		<div class="container-fluid">
+			<a class="navbar-brand" href=""><img src="./drawing-dark.svg" alt="" style="width: 34px;"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTarget">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+	</nav>
+
+	<div id="offcanvasTarget" class="offcanvas offcanvas-end" tabindex="-1">
+		<div class="offcanvas-header">
+			<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+		</div>
+
+		<div class="offcanvas-body">
+		<div class="container-fluid py-5">
+			<ul id="root-tree-menu list-group border-0 rounded">
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Shirts</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Dresses</a></li>
+				<li class="cst-pointer list-group-item list-group-item-action active border-0 rounded"><span class="caret" data-cst-caret><i class="bi-caret-right-fill"></i></span>Jeans</li>
+				<ul class="nested" data-cst-nested>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Skinny</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Relaxed</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Bootcut</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Straight</a></li>
+				</ul>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Jackets</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Gymwear</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Blazers</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Shoes</a></li>
+			</ul>
+		</div>
+
+		<div class="container-fluid pb-5 pt-3 ps-4">
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-telephone"></i> Contact</small></a>
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-mailbox"></i> Newsletter</small></a>
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-rss"></i> Subscribe</small></a>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+	<nav class="side-nav border-end d-none d-md-block">
+		<div class="container-fluid pt-5 pb-3 d-flex justify-content-center align-items-center">
+			<a href="" class="nav-header text-dark company-logo"><img src="./drawing.svg" alt="" style="width: 100px;"></a>
+		</div>
+
+		<div class="container-fluid py-5">
+			<ul id="root-tree-menu list-group border-0 rounded">
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Shirts</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Dresses</a></li>
+				<li class="cst-pointer list-group-item list-group-item-action active border-0 rounded"><span class="caret" data-cst-caret><i class="bi-caret-right-fill"></i></span>Jeans</li>
+				<ul class="nested" data-cst-nested>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Skinny</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Relaxed</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Bootcut</a></li>
+					<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Straight</a></li>
+				</ul>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Jackets</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Gymwear</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Blazers</a></li>
+				<li><a class="list-group-item list-group-item-action border-0 rounded" href="#">Shoes</a></li>
+			</ul>
+		</div>
+
+		<div class="container-fluid pb-5 pt-3 ps-4">
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-telephone"></i> Contact</small></a>
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-mailbox"></i> Newsletter</small></a>
+				<a class="list-group-item list-group-item-action text-secondary border-0 fst-italic" href="#"><small><i class="bi-rss"></i> Subscribe</small></a>
+			</div>
 		</div>
 	</nav>
 
 
 	<main>
+		<div class="container-fluid">
+			<div class="row py-5">
+				<div class="col-sm-11 mx-auto d-flex justify-content-between">
+					<h4>JEANS</h4>
+					<div class="d-flex align-items-center justify-content-between gap-2">
+						<a href="#" class="text-dark"><h3><i class="bi-cart3"></i></h3></a>&nbsp;
+						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							<i class="bi-search"></i>
+						</button>
+					</div>
+				</div>
+			</div>
 
+			<div class="row">
+				<div class="col-11 mx-auto hero-image">
+					<img class="img-fluid rounded" src="./hero-jeans.jpg" alt="">
+					<div class="hero-image-text">
+						<h1 class="text-white display-2">New Arrivals</h1>
+						<h3 class="text-white">COLLECTION 2016</h3>
+						<button class="btn btn-dark btn-lg mt-5">SHOP NOW</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row my-3">
+				<div class="col-sm-11 mx-auto">
+					<span class="text-muted">8 items</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+				<div class="col-sm-11 mx-auto">
+					<div class="row">
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans1.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Ripped Skinny Jeans</p>
+									<strong>$24.99</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans2.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Mega Ripped Jeans</p>
+									<strong>$19.99</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans3.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Washed Skinny Jeans</p>
+									<strong>$20.50</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans4.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Vintage Skinny Jeans</p>
+									<strong>$14.99</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans2.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Mega Ripped Jeans</p>
+									<strong>$19.99</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans3.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Washed Skinny Jeans</p>
+									<strong>$20.50</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans4.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Vintage Skinny Jeans</p>
+									<strong>$14.99</strong>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="card border-0">
+								<img src="./jeans1.jpg" class="card-img-top rounded" alt="...">
+								<div class="card-body px-0">
+									<p class="card-text mb-0">Ripped Skinny Jeans</p>
+									<strong>$24.99</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<section id="subscription">
+			<div class="container-fluid bg-dark py-5">
+				<div class="row">
+					<div class="col-sm-11 mx-auto text-white">
+						<h1 class="my-3">Subscribe</h1>
+						<p>To get special offers and VIP treatment:</p>
+						<form class="form">
+							<input class="form-control mb-3" type="email" placeholder="Enter e-mail" required>
+							<button class="btn btn-danger">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container-fluid bg-light py-5">
+				<div class="col-sm-11 mx-auto">
+					<div class="row">
+						<div class="col-md-4 text-center">
+							<h3 class="fw-light">Contact</h3>
+							<small>Question? Go ahead.</small>
+
+							<form class="form my-3">
+								<input class="form-control mb-2" type="text" placeholder="Name" required>
+								<input class="form-control mb-2" type="email" placeholder="Email" required>
+								<input class="form-control mb-2" type="text" placeholder="Subject" required>
+								<input class="form-control mb-2" type="text" placeholder="Message" required>
+								<div class="d-grid">
+									<button class="btn btn-dark">Send</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="col-md-4 text-center">
+							<h3 class="fw-light">About</h3>
+							<ul class="list-unstyled">
+								<li class="mb-2"><small><a href="#" class="text-dark">About us</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">We are hiring</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Support</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Find store</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Shipment</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Payment</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Gift card</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Return</a></small></li>
+								<li class="mb-2"><small><a href="#" class="text-dark">Help</a></small></li>
+							</ul>
+						</div>
+
+						<div class="col-md-4 text-center text-md-start">
+							<h3 class="fw-light">Store</h3>
+							<ul class="list-unstyled">
+								<li><small><i class="bi-geo-alt-fill mb-2"></i> Company Name</small></li>
+								<li><small><i class="bi-telephone-fill mb-2"></i> 0044123123</small></li>
+								<li><small><i class="bi-envelope-fill mb-2"></i> ex@mail.com</small></li>
+							</ul>
+
+							<h3 class="fw-light">We accept</h3>
+							<ul class="list-unstyled">
+								<li><small><i class="bi-card-heading mb-2"></i> Amex</small></li>
+								<li><small><i class="bi-credit-card-fill mb-2"></i> Credit Card</small></li>
+							</ul>
+
+							<div class="d-flex pt-4 gap-1 justify-content-center justify-content-md-start">
+								<a class="text-dark" href="#"><i class="bi-facebook"></i></a>
+								<a class="text-dark" href="#"><i class="bi-instagram"></i></a>
+								<a class="text-dark" href="#"><i class="bi-snapchat"></i></a>
+								<a class="text-dark" href="#"><i class="bi-pinterest"></i></a>
+								<a class="text-dark" href="#"><i class="bi-twitter"></i></a>
+								<a class="text-dark" href="#"><i class="bi-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<footer>
+			<div class="container-fluid bg-dark text-white text-center py-5">
+				<p class="mb-0">Powered by <a class="text-white" href="#">webdev</a></p>
+			</div>
+		</footer>
 	</main>
 
+	 <!-- add hover effect on menu -->
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="input-group">
+						<input type="text" class="form-control cst-search-bar" placeholder="Search for type / model" aria-label="Recipient's username" aria-describedby="button-addon2">
+						<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
   <script src="script.js"></script>
+	<script type="text/javascript">
+					const toggler = document.querySelectorAll("[data-cst-caret]");
+					const nested = document.querySelectorAll("[data-cst-nested]");
+
+					for (let i = 0; i < toggler.length; i++) {
+						toggler[i].parentElement.addEventListener("click", function() {
+									toggler[i].classList.toggle("caret-down");
+									if (toggler[i].classList.contains("caret-down")) {
+										if (i > 0) {
+													for (let j = i - 1; j > -1; j--) {
+																nested[j].style.height = `${nested[i].scrollHeight + nested[j].scrollHeight}px`
+															}
+												}
+												nested[i].style.height = `${nested[i].scrollHeight}px`;
+											} else {
+										if (i > 0) {
+													for (let j = i - 1; j > -1; j--) {
+																nested[j].style.height = `${nested[i].scrollHeight - nested[j].scrollHeight}px`
+															}
+												}
+														nested[i].style.height = "0";
+													}
+							});
+					}
+	</script>
 </body>
 
 </html>
